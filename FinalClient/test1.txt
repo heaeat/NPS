@@ -1,0 +1,52 @@
+# Parameter Mode
+  Model number:
+      Malformed.				[error]
+      Not in database.				[error]
+      valid.				
+  Number of required slots for selected model:
+      0.					[single]
+      1.					[property RSNE][single]
+      Many.					[property RSNE][property RSMANY]
+  Number of ptional slots for selected model:
+      0.					[single]
+      1.					[property OSNE][single]
+      Many.					[property OSNE][property OSMANY]
+# Environment Product data base
+  Number of models in database:
+      0.					[error]
+      1.					[single]
+      Many.				
+  Number of required slots for selected model:
+      0.					[error]
+      1.					[single]
+      Many.				
+# Parameter Component
+  Correspondencee of selection with model slots:
+      Omitted slots. 				[error]
+      Extra slots. 				[error]
+      Mismatched slots. 			[error]
+      Complete correspondence.
+  ¤± of required components(selection !=empty):
+      0.					[if RSNE] [error]     
+      <number required slots.			[if RSNE] [error]    
+      =number required slots.			[if RSMANY]
+  Required component selection:
+      Some defaults.				[single]
+      All valid.				
+      >= 1 incompatible with slots.
+      >= 1 incompatible with another selection.
+      >= 1 incompatible with model.
+      >= 1 not in database.			[error]
+	
+   ¤± of optional components(selection !=empty):
+      0.					
+      < #SMOS.					[if OSNE]
+      = #SMOS.					[if OSMANY]
+
+   Optional component selection:
+      Some defaults.				[single]
+      All valid.				
+      >= 1 incompatible with slots.
+      >= 1 incompatible with another selection.
+      >= 1 incompatible with model.
+      >= 1 not in database.			[error]

@@ -1,0 +1,22 @@
+# 계기판 display
+  표시:
+      캐빈 무게. 			[property WEI]
+
+# 시스템 액션
+  장애 조작:
+      지진.				[property OBSEQ]
+      추락.				[property OBSCR]
+
+# 설정
+  캐빈 한계 무게:
+      > 현재 총 무게.			[property WEIOVER][if WEI]
+
+# 장애 대응
+
+  지진 대응:
+      1층 인명피해 발생.		[if OBSEQ]
+      캐빈 우선동작.			[if OBSEQ]
+
+ 추락 대응:
+      1층 인명피해 발생.		[if OBSCR && WEIOVER]
+      캐빈 우선동작.			[if OBSCR && WEIOVER]

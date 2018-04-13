@@ -1,0 +1,29 @@
+# 계기판 display
+  표시:
+      캐빈 무게. 			[property WEI]
+      운행 속도. 			[single]
+      대기 인원.
+      모터의 힘.
+      만원.
+      탑승 인원.
+
+# 시스템 액션
+  장애 조작:
+      화재.				[property OBSFR]
+      수해.				[property OBSFD]
+      지진.				[property OBSEQ]
+      추락.				[property OBSCR]
+  시뮬레이션:
+      시작.				
+      정지.				[error]
+      일시정지				[if OSBFR]
+
+# 설정
+  승객 생성:
+      >=0 인 정수.
+      그 외.				[error]
+       
+  화재대응:
+      인명피해 발생. 			[if OBSFR]
+      캐빈 우선동작. 			[if OBSFR]
+      화재 진압.			[if OBSFR]	

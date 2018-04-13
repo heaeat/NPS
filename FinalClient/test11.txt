@@ -1,0 +1,38 @@
+# 파일
+  파일 I/O:
+      저장.          
+      불러오기.          
+      
+# 특수효과
+  특수효과:
+      데칼코마니.            [single]
+      점선으로 변경.            [single]
+      그림자효과.            [single]
+      초기화.            [single]
+      효과없음.            [single]
+
+# 그리기
+  그리기도구:
+      색채우기.            [property DT]
+      연필.            [property DT]
+      지우개.            [property DTWD]
+      도형-사각형.            [property DT][property DTWD]
+      도형-원.            [property DT][property DTWD]
+      브러시-노말.            [property DT][property DTWD]
+      브러시-special1.            [property DT][property DTWD]
+      브러시-special2.            [property DT][property DTWD]
+      선.            [property DT][property DTWD]
+      
+# 선두께
+  선두께:
+      1.          [if DTWD]
+      5.          [if DTWD]
+      10.         [if DTWD]
+      15.          [if DTWD]
+      20.          [if DTWD]
+
+# 색상
+  색상:
+      Default.          [if DT]
+      색편집.          [if DT]
+      색선택.          [if DT]

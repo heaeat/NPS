@@ -1,0 +1,50 @@
+# Account
+  Setting:
+      AccountParentPassword.          [property AP]
+      AccountChildName.          [property AC]
+      AccountParentChild Name.            [property APC]
+      AccountNull.                 [error]
+      
+# Mode Select
+  ModeButton:
+      ParentMode.            [if AP && APC][property PM]
+      ChildMode.            [if AC && APC][property CM]
+
+# Input-Button
+  ParentButton:
+      ParentbtnSendMsg.                 [if PM]
+      ParentbtnGoalSetting.            [if PM][property PMG]
+      ParentbtnCheckGoal.              [If PM]
+	ParentbtnReset.              [if PM]
+  ChildButton:
+      ChildbtnPractice.                 [if CM][property CMP]
+      ChildbtnGame.            [if CM][property CMG]
+      ChildbtnDictionary.                 [if CM][property CMD]
+  ChildParcticeButton:
+      ChildPracticebtnWord[1].                 [single][if CMP]
+      ChildPracticebtnWord[2].                 [if CMP]
+      ChildPracticebtnWord[3].                 [if CMP]
+      ChildPracticebtnSound.                 [single][if CMP]
+      ChildPracticebtnNext.                 [single][if CMP]
+  ChildGameButton:
+      ChildGamebtnSound.                 [if CMG]
+      ChildGamebtnNext.                 [if CMG]
+      ChildGamebtnExit.                 [if CMG]
+  ChildDicButton:
+      ChildDicbtnSound.                 [if CMD]
+      ChildDicbtnExit.            [if CMD]
+            
+# Input-Text
+  ParentText:
+      ParenttxtGoalNull.                 [error][if PMG]
+      ParenttxtGoalInteger.                 [if PMG]
+      ParenttxtRewardNull.                 [error][if PMG]
+      ParenttxtRewardInteger.                 [if PMG]
+  ChildGameText:
+      ChildGametxtWord_Eng.                 [error][if CMG]
+      ChildGametxtWord_!Eng.                 [error][if CMG]
+      ChildGametxtWord_Any.                 [if CMG]
+  ChildDicText:
+      ChildDictxtWordEng.
+      ChildDictxtWordNotEng.                 [error][if CMD]
+      ChildDictxtWordNotAny.                 [error][if CMD]
